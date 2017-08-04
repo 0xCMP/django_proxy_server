@@ -17,7 +17,8 @@ def test_error(request):
 def test_token_validation(request):
     service_url = generate_service_url('/login')
     response = invoke_backend_service_as_proxy(request, 'POST', service_url, json_data={ 'email': 'admin@test.com', 'password': 'password' })
-    print 'Views:', response
+    print('Views:', response)
+
 
 def test_undecorated(request):
     return HttpResponseNotModified()
